@@ -1,6 +1,10 @@
 {
 	"name": "DS_ADLS_adf_container_userprofiles_raw",
 	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLS_eystrgacnt",
+			"type": "LinkedServiceReference"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
