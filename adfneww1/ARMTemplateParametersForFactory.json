@@ -8,7 +8,22 @@
 		"LS_ADLS_eystrgacnt_accountKey": {
 			"value": ""
 		},
+		"LS_azuresqldatabase_userdb_connectionString": {
+			"value": ""
+		},
+		"LS_new_for demo_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://eystrgacnt.dfs.core.windows.net"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://demo-keyvault-ey.vault.azure.net/"
+		},
 		"LS_ADLS_eystrgacnt_properties_typeProperties_url": {
+			"value": "https://eystrgacnt.dfs.core.windows.net/"
+		},
+		"LS_new_for demo_properties_typeProperties_url": {
 			"value": "https://eystrgacnt.dfs.core.windows.net/"
 		}
 	}
