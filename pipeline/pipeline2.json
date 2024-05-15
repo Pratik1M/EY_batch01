@@ -48,14 +48,14 @@
 					}
 				],
 				"policy": {
-					"secureOutput": true,
-					"secureInput": true
+					"secureOutput": false,
+					"secureInput": false
 				},
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "Area",
 					"value": {
-						"value": "@{mul(int(variables('length')),int(variables('breadth')))}\n\n\n\n",
+						"value": "@{mul(\n    int(variables('length')),\n    int(variables('breadth'))\n    )\n}",
 						"type": "Expression"
 					}
 				}
