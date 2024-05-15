@@ -13,7 +13,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "length",
-					"value": "20"
+					"value": "10"
 				}
 			},
 			{
@@ -27,7 +27,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "breadth",
-					"value": "10"
+					"value": "20"
 				}
 			},
 			{
