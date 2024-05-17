@@ -16,12 +16,11 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "DS_ADLS_adf_container_userprofiles_raw",
+						"referenceName": "DelimitedText3",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
-						"itemName",
-						"size"
+						"childItems"
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
@@ -46,7 +45,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Get all files').output.itemName",
+						"value": "@activity('Get all files').output.childItems",
 						"type": "Expression"
 					},
 					"activities": [
@@ -64,8 +63,14 @@
 							"userProperties": [],
 							"typeProperties": {
 								"dataset": {
-									"referenceName": "DS_ADLS_adf_container_userprofiles_raw",
-									"type": "DatasetReference"
+									"referenceName": "DelimitedText2",
+									"type": "DatasetReference",
+									"parameters": {
+										"Filename": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
 								},
 								"fieldList": [
 									"itemName",
@@ -94,7 +99,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
-									"value": "@greater(item().size,0)",
+									"value": "@greater(activity('Get Metadata1').output.size,0)",
 									"type": "Expression"
 								},
 								"ifFalseActivities": [
@@ -162,7 +167,7 @@
 				"type": "Array"
 			},
 			"finalfilenames": {
-				"type": "String"
+				"type": "Array"
 			}
 		},
 		"folder": {
