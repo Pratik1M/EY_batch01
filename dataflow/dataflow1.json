@@ -1,0 +1,27 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"linkedService": {
+						"referenceName": "LS_azuresqldatabase_userdb",
+						"type": "LinkedServiceReference"
+					},
+					"name": "sourcetable"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"scriptLines": [
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'query',",
+				"     store: 'sqlserver',",
+				"     query: 'Select * from user1',",
+				"     isolationLevel: 'READ_UNCOMMITTED') ~> sourcetable"
+			]
+		}
+	}
+}
